@@ -1,0 +1,39 @@
+/* 독후감 노트 · 먹색과 노랑 (앱 디자인 토큰과 같은 값) */
+:root{--ink:#111111;--muted:#55554F;--faint:#7B7B73;--surface:#F5F5F2;--cream:#F6F1E4;--line:#D9D9D3;--yellow:#FFE066;--on-yellow:#2B2300}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;color:var(--ink);line-height:1.7;background:#fff;word-break:keep-all}
+.serif,h1,h2,h3,.brand{font-family:"Gowun Batang","AppleMyungjo",serif}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px 64px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-size:14px}
+nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+nav a:hover,nav a[aria-current]{color:var(--ink);font-weight:700}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:700;font-size:18px;margin:0}
+.brand img{width:32px;height:32px;border-radius:8px}
+.eyebrow{font-size:12px;letter-spacing:.2em;color:var(--faint)}
+.hero{display:flex;gap:28px;align-items:center;padding:36px 0 28px}
+.hero img{width:132px;height:132px;border-radius:30px;box-shadow:0 14px 30px -10px rgba(0,0,0,.35)}
+.hero h1{font-size:44px;line-height:1.15;margin:6px 0 10px}
+.hero p{color:var(--muted);font-size:17px}
+.card{background:var(--surface);border-radius:20px;padding:22px 24px;margin:16px 0}
+.card.yellow{background:var(--yellow);color:var(--on-yellow)}
+h2{font-size:24px;margin:40px 0 6px}
+h3{font-size:18px;margin:0 0 4px}
+p+p{margin-top:8px}
+.muted{color:var(--muted)} .small{font-size:13px;color:var(--faint)}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.features .card{margin:0}
+ol,ul{padding-left:1.3em} li+li{margin-top:6px}
+details{border-top:1px solid var(--line);padding:14px 0}
+details:first-of-type{border-top:none}
+summary{cursor:pointer;font-family:"Gowun Batang",serif;font-weight:700;font-size:17px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"＋";margin-right:10px;font-family:sans-serif}
+details[open] summary::before{content:"－"}
+details p{margin-top:8px;color:var(--muted)}
+.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:11px 22px}
+a{color:var(--ink)}
+a:focus-visible,summary:focus-visible,.btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+footer{border-top:1px solid var(--line);margin-top:48px;padding-top:18px;font-size:13px;color:var(--faint);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer a{color:var(--muted)}
+@media (max-width:560px){.hero{flex-direction:column;align-items:flex-start;gap:18px;padding-top:20px}.hero img{width:96px;height:96px;border-radius:22px}.hero h1{font-size:34px}nav a{margin-left:12px}}
